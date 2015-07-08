@@ -7,7 +7,8 @@ import com.serialport.SerialPort;
 
 public class Hello extends CordovaPlugin {
 
-    private final SerialPort serialPort = new SerialPort("/dev/ttyS2", 115200, 1);
+    File file = new File ("/dev/", "ttyS2");
+    private final SerialPort serialPort = new SerialPort(file, 115200, 1);
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
