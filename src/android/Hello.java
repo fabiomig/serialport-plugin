@@ -20,14 +20,13 @@ public class Hello extends CordovaPlugin {
 
     try { 
 
-        serialPort=new SerialPort(file, 115200, 1); 
+        serialPort = new SerialPort(file, 115200, 1); 
 
     }
     catch (IOException e) { 
 
         // catch all IOExceptions not handled by previous catch blocks
         System.out.println("General I/O exception: " + e.getMessage());
-        e.printStackTrace();
     } 
         
     @Override
