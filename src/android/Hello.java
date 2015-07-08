@@ -18,7 +18,11 @@ public class Hello extends CordovaPlugin {
     private final SerialPort serialPort; 
 
 
-    { try { serialPort=new SerialPort(file, 115200, 1); } }
+    try { 
+
+        serialPort=new SerialPort(file, 115200, 1); 
+
+    }
     catch (IOException e) { 
 
         // catch all IOExceptions not handled by previous catch blocks
