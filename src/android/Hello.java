@@ -15,7 +15,7 @@ import com.serialport.SerialPort;
 public class Hello extends CordovaPlugin {
 
     File file = new File ("/dev/", "ttyS2");
-    private final SerialPort serialPort;
+    private final SerialPort serialPort = null;
 
     { try {
 
