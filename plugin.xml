@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.serialport"
+        id="com.serialport.hello"
         version="0.0.1">
 
   <name>Hello</name>
@@ -19,7 +19,7 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Hello">
-        <param name="android-package" value="com.serialport"/>
+        <param name="android-package" value="com.serialport.hello"/>
       </feature>
     </config-file>
 
