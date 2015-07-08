@@ -17,19 +17,19 @@ public class Hello extends CordovaPlugin {
     File file = new File ("/dev/", "ttyS2");
     private final SerialPort serialPort;
 
+    { try {
+
+        serialPort = new SerialPort(file, 115200, 1);
+
+    }
+    catch (IOException e) {
+
+        // catch all IOExceptions not handled by previous catch blocks
+        System.out.println("General I/O exception: " + e.getMessage());
+    } }
+
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
-
-        {try {
-
-            serialPort = new SerialPort(file, 115200, 1);
-
-        }
-        catch (IOException e) {
-
-            // catch all IOExceptions not handled by previous catch blocks
-            System.out.println("General I/O exception: " + e.getMessage());
-        }}
 
         if (action.equals("greet")) {
 
