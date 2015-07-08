@@ -5,6 +5,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 
 public class Hello extends CordovaPlugin {
+    
+    private final SerialPort serialPort = new SerialPort();
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
