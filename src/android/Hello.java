@@ -5,6 +5,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import java.io.File;
 import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 import com.serialport.SerialPort;
 
 public class Hello extends CordovaPlugin {
