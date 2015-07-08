@@ -17,6 +17,11 @@ public class Hello extends CordovaPlugin {
     File file = new File ("/dev/", "ttyS2");
     private final SerialPort serialPort = new SerialPort(file, 115200, 1);
 
+    if (SerialPort == null) {
+        Log.e(TAG, "native open returns null");
+        throw new IOException();
+    }
+        
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
