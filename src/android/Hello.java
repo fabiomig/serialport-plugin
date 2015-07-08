@@ -3,6 +3,8 @@ package com.serialport;
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
+import java.io.File;
+import java.io.FileDescriptor;
 import com.serialport.SerialPort;
 
 public class Hello extends CordovaPlugin {
