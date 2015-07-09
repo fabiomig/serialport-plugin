@@ -19,9 +19,9 @@ public class Hello extends CordovaPlugin {
     Hello() throws IOException {
 
     }
-    
+
     @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException, IOException {
 
         File file = new File ("/dev/", "ttyS2");
         serialPort = new SerialPort(file, 115200, 1);
