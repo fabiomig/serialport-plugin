@@ -25,7 +25,7 @@ public class Hello extends CordovaPlugin {
         File file = new File ("/dev/", "ttyS");
 
         try {
-            serialPort = new SerialPort(file, 115200, 2);
+            serialPort = new SerialPort(file, 115200, 1);
             //mOutputStream = serialPort.getOutputStream();
             //mInputStream  = serialPort.getInputStream();
             //mOutputStream.write(new String(text).getBytes());
