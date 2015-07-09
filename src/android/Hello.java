@@ -14,9 +14,7 @@ import com.serialport.SerialPort;
 
 public class Hello extends CordovaPlugin {
 
-    File file = new File ("/dev/", "ttyS2");
     private final SerialPort serialPort;
-    serialPort = new SerialPort(file, 115200, 1);
 
     Hello() throws IOException {
 
@@ -24,6 +22,9 @@ public class Hello extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+
+        File file = new File ("/dev/", "ttyS2");
+        serialPort = new SerialPort(file, 115200, 1);
 
         if (action.equals("greet")) {
 
