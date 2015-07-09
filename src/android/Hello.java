@@ -24,8 +24,8 @@ public class Hello extends CordovaPlugin {
 
         try {
           serialPort = new SerialPort(file, 115200, 1);
-            serialPort.mFileOutputStream("Test");
-            serialPort.mFileOutputStream('\n');
+            serialPort.OutputStream("Test");
+            serialPort.OutputStream('\n');
 
         } catch (IOException ex) {
           ex.printStackTrace();
