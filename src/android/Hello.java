@@ -16,10 +16,6 @@ public class Hello extends CordovaPlugin {
 
     private SerialPort serialPort = null;
 
-    Hello() throws IOException {
-
-    }
-
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
