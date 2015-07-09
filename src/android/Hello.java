@@ -1,4 +1,4 @@
-package com.serialport;
+package serialport;
 
 import org.apache.cordova.*;
 import org.json.JSONArray;

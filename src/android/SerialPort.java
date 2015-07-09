@@ -14,7 +14,7 @@
  * limitations under the License. 
  */
 
-package com.serialport;
+package serialport;
 
 import java.io.File;
 import java.io.FileDescriptor;
