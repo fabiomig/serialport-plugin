@@ -14,7 +14,7 @@ import com.serialport.SerialPort;
 
 public class Hello extends CordovaPlugin {
 
-    private final SerialPort serialPort;
+    private SerialPort serialPort;
 
     Hello() throws IOException {
 
