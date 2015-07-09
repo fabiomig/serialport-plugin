@@ -2,8 +2,8 @@
 #include <jni.h>
 /* Header for class android_serialport_api_SerialPort */
 
-#ifndef _Included_serialport_SerialPort
-#define _Included_serialport_SerialPort
+#ifndef _Included_android_serialport_api_SerialPort
+#define _Included_android_serialport_api_SerialPort
 #ifdef __cplusplus
 extern "C" {
 #endif

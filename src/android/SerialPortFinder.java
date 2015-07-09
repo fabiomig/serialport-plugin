@@ -14,7 +14,7 @@
  * limitations under the License. 
  */
 
-package serialport;
+package android_serialport_api;
 
 import java.io.File;
 import java.io.FileReader;

@@ -1,4 +1,4 @@
-package serialport;
+package android_serialport_api;
 
 import org.apache.cordova.*;
 import org.json.JSONArray;
@@ -10,8 +10,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import serialport.SerialPort;
-import serialport.SerialPortFinder;
+import android_serialport_api.SerialPort;
+import android_serialport_api.SerialPortFinder;
 
 public class Hello extends CordovaPlugin {
 

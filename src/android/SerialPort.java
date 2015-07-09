@@ -14,7 +14,7 @@
  * limitations under the License. 
  */
 
-package serialport;
+package android_serialport_api;
 
 import java.io.File;
 import java.io.FileDescriptor;
@@ -59,12 +59,10 @@ public class SerialPort {
 		}
 
 		mFd = open(device.getAbsolutePath(), baudrate, flags);
-		
 		if (mFd == null) {
 			Log.e(TAG, "native open returns null");
 			throw new IOException();
 		}
-
 		mFileInputStream = new FileInputStream(mFd);
 		mFileOutputStream = new FileOutputStream(mFd);
 	}

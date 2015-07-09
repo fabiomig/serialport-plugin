@@ -19,13 +19,13 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Hello">
-        <param name="android-package" value="serialport.Hello"/>
+        <param name="android-package" value="android_serialport_api.Hello"/>
       </feature>
     </config-file>
 
-    <source-file src="src/android/Hello.java" target-dir="src/serialport"/>
-    <source-file src="src/android/SerialPort.java" target-dir="src/serialport"/>
-    <source-file src="src/android/SerialPortFinder.java" target-dir="src/serialport"/>
+    <source-file src="src/android/Hello.java" target-dir="src/android_serialport_api"/>
+    <source-file src="src/android/SerialPort.java" target-dir="src/android_serialport_api"/>
+    <source-file src="src/android/SerialPortFinder.java" target-dir="src/android_serialport_api"/>
     <source-file src="libs/armeabi/libserial_port.so" target-dir="libs/armeabi"/>
     <source-file src="libs/armeabi-v7a/libserial_port.so" target-dir="libs/armeabi-v7a"/>
     <source-file src="libs/x86/libserial_port.so" target-dir="libs/x86"/>
