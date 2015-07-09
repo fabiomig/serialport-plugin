@@ -16,6 +16,9 @@ import android_serialport_api.SerialPortFinder;
 public class Hello extends CordovaPlugin {
 
     private SerialPort serialPort = null;
+    protected SerialPort mSerialPort;
+    protected OutputStream mOutputStream;
+    private InputStream mInputStream;
 
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
@@ -23,9 +26,11 @@ public class Hello extends CordovaPlugin {
         File file = new File ("/dev/", "ttyS2");
 
         try {
-          serialPort = new SerialPort(file, 115200, 1);
-            serialPort.OutputStream("Test");
-            serialPort.OutputStream('\n');
+            serialPort = new SerialPort(file, 115200, 1);
+            mOutputStream = serialPort.getOutputStream();
+            mInputStream  = serialPort.getInputStream();
+            mOutputStream.write(new String("Teste").getBytes());
+            mOutputStream.write('\n');
 
         } catch (IOException ex) {
           ex.printStackTrace();
