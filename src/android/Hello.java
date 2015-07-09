@@ -14,12 +14,12 @@ import com.serialport.SerialPort;
 
 public class Hello extends CordovaPlugin {
 
-    private SerialPort serialPort;
+    private SerialPort serialPort = null;
 
     Hello() throws IOException {
 
     }
-
+    
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
