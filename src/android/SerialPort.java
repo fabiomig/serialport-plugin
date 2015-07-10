@@ -43,8 +43,11 @@ public class SerialPort {
 		if (!device.canRead() || !device.canWrite()) {
 			try {
 
-				device.canRead()  ? Log.e(TAG, "CAN READ") : Log.e(TAG, "CAN NOT READ");
-				device.canWrite() ? Log.e(TAG, "CAN WRITE") : Log.e(TAG, "CAN NOT WRITE");
+				String resultread  = ( device.canRead() ) ? "CAN READ" : "CANOT READ";
+				String resultwrite = ( device.canWrite() ) ? "CAN WRITE" : "CANOT WRITE";
+
+				Log.e(TAG, resultread);
+				Log.e(TAG, resultwrite);
 				/* Missing read/write permission, trying to chmod the file */
 				Process su;
 				su = Runtime.getRuntime().exec("su");
