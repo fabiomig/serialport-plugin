@@ -9,6 +9,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.security.InvalidParameterException;
+
 
 import android_serialport_api.SerialPort;
 import android_serialport_api.SerialPortFinder;
@@ -22,7 +24,7 @@ public class Hello extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
-        File file = new File ("/dev/", "ttyS");
+        File file = new File ("/dev/", "ttyS2");
 
         try {
             serialPort = new SerialPort(file, 115200, 1);
