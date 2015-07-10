@@ -24,14 +24,14 @@ public class Hello extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
 
-        File file = new File ("/dev/", "ttyS2");
+        File file = new File ("/dev/", "ttyS");
 
         try {
-            serialPort = new SerialPort(file, 115200, 1);
-            //mOutputStream = serialPort.getOutputStream();
+            serialPort = new SerialPort(file, 115200, 2);
+            mOutputStream = serialPort.getOutputStream();
             //mInputStream  = serialPort.getInputStream();
             //mOutputStream.write(new String(text).getBytes());
-            //mOutputStream.write('\n');
+            mOutputStream.write('\n');
 
         } catch (IOException ex) {
           ex.printStackTrace();
