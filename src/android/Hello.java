@@ -22,7 +22,7 @@ public class Hello extends CordovaPlugin {
     private InputStream mInputStream;
 
     @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException, SecurityException, IOException, InvalidParameterException {
 
         File file = new File ("/dev/", "ttyS2");
 
