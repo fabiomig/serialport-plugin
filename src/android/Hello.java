@@ -41,13 +41,13 @@ public class Hello extends CordovaPlugin {
     }
 
     @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(String action, String message, CallbackContext callbackContext) throws JSONException {
         
         if (action.equals("greet")) {
 
             try {
                 
-                this.open_con("Teste de impressao \n");
+                this.open_con(message);
                 
             } catch (IOException ex) {
                 
