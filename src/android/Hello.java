@@ -32,8 +32,9 @@ public class Hello extends CordovaPlugin {
                 mOutputStream.write('\n');
         } catch (IOException ex) {
                 ex.printStackTrace();
+                return false;
         }
-
+        return true;
     }
 
     @Override
