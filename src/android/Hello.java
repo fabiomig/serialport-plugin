@@ -20,9 +20,8 @@ public class Hello extends CordovaPlugin {
     private SerialPort serialPort = null;
     protected OutputStream mOutputStream;
     private InputStream mInputStream;
-
-    @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException, SecurityException, IOException, InvalidParameterException {
+    
+    public boolean open_con() throws JSONException, SecurityException, IOException, InvalidParameterException {
 
         File file = new File ("/dev/", "ttyS2");
 
@@ -37,6 +36,12 @@ public class Hello extends CordovaPlugin {
           ex.printStackTrace();
         }
 
+    }
+
+    @Override
+    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException, SecurityException, IOException, InvalidParameterException {
+        
+        this.open_con();
         if (action.equals("greet")) {
 
             String name = data.getString(0);
