@@ -47,7 +47,7 @@ public class Hello extends CordovaPlugin {
 
             try {
                 
-                this.open_con(message);
+                this.open_con(new String(message).getBytes());
                 
             } catch (IOException ex) {
                 
