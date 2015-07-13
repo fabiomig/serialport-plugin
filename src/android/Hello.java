@@ -21,7 +21,7 @@ public class Hello extends CordovaPlugin {
     protected OutputStream mOutputStream;
     private InputStream mInputStream;
     
-    public boolean open_con() throws JSONException, SecurityException, IOException, InvalidParameterException {
+    public boolean open_con(String message) throws JSONException, SecurityException, IOException, InvalidParameterException {
 
         try {
                 File file = new File ("/dev/", "ttyS2");
@@ -29,7 +29,7 @@ public class Hello extends CordovaPlugin {
                 mOutputStream = serialPort.getOutputStream();
                 //mInputStream  = serialPort.getInputStream();
                 //mOutputStream.write(new String(text).getBytes());
-                mOutputStream.write('\n');
+                mOutputStream.write(message);
         } catch (IOException ex) {
                 ex.printStackTrace();
                 return false;
@@ -44,7 +44,7 @@ public class Hello extends CordovaPlugin {
 
             try {
                 
-                this.open_con();
+                this.open_con('Teste de impressão');
                 
             } catch (IOException ex) {
                 
@@ -52,9 +52,9 @@ public class Hello extends CordovaPlugin {
             
             }
             
-            String name = data.getString(0);
-            String message = "Hello, " + name;
-            callbackContext.success(message);
+            //String name = data.getString(0);
+            //String message = "Hello, " + name;
+            //callbackContext.success(message);
 
             return true;
 
