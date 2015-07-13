@@ -30,6 +30,8 @@ public class Hello extends CordovaPlugin {
                 //mInputStream  = serialPort.getInputStream();
                 //mOutputStream.write(new String(text).getBytes());
                 mOutputStream.write(new String(message).getBytes());
+                mSerialPort.close();
+                mSerialPort = null;
         } catch (IOException ex) {
                 ex.printStackTrace();
                 return false;
