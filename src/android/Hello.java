@@ -39,7 +39,7 @@ public class Hello extends CordovaPlugin {
     }
 
     @Override
-    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException, SecurityException, IOException, InvalidParameterException {
+    public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
         
         this.open_con();
         if (action.equals("greet")) {
