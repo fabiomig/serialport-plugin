@@ -46,7 +46,7 @@ public class Hello extends CordovaPlugin {
 
             try {
                 
-                this.open_con("Teste de impressão");
+                this.open_con("Teste de impressao \n");
                 
             } catch (IOException ex) {
                 
