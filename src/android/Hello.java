@@ -23,17 +23,15 @@ public class Hello extends CordovaPlugin {
     
     public boolean open_con() throws JSONException, SecurityException, IOException, InvalidParameterException {
 
-        File file = new File ("/dev/", "ttyS2");
-
         try {
-            serialPort = new SerialPort(file, 115200, 0);
-            mOutputStream = serialPort.getOutputStream();
-            //mInputStream  = serialPort.getInputStream();
-            //mOutputStream.write(new String(text).getBytes());
-            mOutputStream.write('\n');
-
+                File file = new File ("/dev/", "ttyS2");
+                serialPort = new SerialPort(file, 115200, 0);
+                mOutputStream = serialPort.getOutputStream();
+                //mInputStream  = serialPort.getInputStream();
+                //mOutputStream.write(new String(text).getBytes());
+                mOutputStream.write('\n');
         } catch (IOException ex) {
-          ex.printStackTrace();
+                ex.printStackTrace();
         }
 
     }
@@ -41,9 +39,18 @@ public class Hello extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
         
-        this.open_con();
         if (action.equals("greet")) {
 
+            try {
+                
+                this.open_con();
+                
+            } catch (IOException ex) {
+                
+                ex.printStackTrace();
+            
+            }
+            
             String name = data.getString(0);
             String message = "Hello, " + name;
             callbackContext.success(message);
