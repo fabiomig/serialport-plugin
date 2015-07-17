@@ -24,7 +24,7 @@ public class Hello extends CordovaPlugin {
     public boolean open_con(String message) throws JSONException, SecurityException, IOException, InvalidParameterException {
 
         try {
-                File file = new File ("/dev/usb/", "ttyS2");
+                File file = new File ("/dev/", "ttyS2");
                 serialPort = new SerialPort(file, 115200, 0);
                 mOutputStream = serialPort.getOutputStream();
                 //mInputStream  = serialPort.getInputStream();
